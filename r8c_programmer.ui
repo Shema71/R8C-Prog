@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>R8CProgrammer</class>
+ <widget class="QMainWindow" name="R8CProgrammer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>R8C Programmer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,2,0">
+    <item>
+     <layout class="QHBoxLayout" name="portSelectLayout">
+      <item>
+       <widget class="QLabel" name="labelPort">
+        <property name="text">
+         <string>Serial Port:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxSerialPorts"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRefreshPorts">
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="addressLayout">
+      <item>
+       <widget class="QLabel" name="labelStartAddr">
+        <property name="text">
+         <string>Start Addr:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditStartAddr"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelEndAddr">
+        <property name="text">
+         <string>End Addr:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditEndAddr"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QLabel" name="labelHexEditor">
+        <property name="text">
+         <string>Hex Editor:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="hexViewer">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="console">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="maximumHeight">
+       <number>150</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="btnRead">
+        <property name="text">
+         <string>Read</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnWrite">
+        <property name="text">
+         <string>Write</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnVerify">
+        <property name="text">
+         <string>Verify</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBoot">
+        <property name="text">
+         <string>БУУТ</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpenHex"/>
+    <addaction name="actionSaveHex"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionOpenHex">
+   <property name="text">
+    <string>Open .hex/.mot/.bin...</string>
+   </property>
+  </action>
+  <action name="actionSaveHex">
+   <property name="text">
+    <string>Save .hex/.mot/.bin...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
